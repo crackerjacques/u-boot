@@ -6,6 +6,14 @@
 #ifndef __CONFIG_RK3288_COMMON_H
 #define __CONFIG_RK3288_COMMON_H
 
+#define ENV_MEM_LAYOUT_SETTINGS \
+	"scriptaddr=0x00000000\0" \
+	"pxefile_addr_r=0x00100000\0" \
+	"fdt_addr_r=0x01e00000\0" \
+	"fdtoverlay_addr_r=0x01f00000\0" \
+	"kernel_addr_r=0x02000000\0" \
+	"ramdisk_addr_r=0x04000000\0"
+
 #include "rockchip-common.h"
 
 #define CFG_SYS_HZ_CLOCK		24000000
@@ -14,14 +22,6 @@
 
 #define CFG_SYS_SDRAM_BASE		0
 #define SDRAM_MAX_SIZE			0xfe000000
-
-#define ENV_MEM_LAYOUT_SETTINGS \
-	"scriptaddr=0x00000000\0" \
-	"pxefile_addr_r=0x00100000\0" \
-	"fdt_addr_r=0x01e00000\0" \
-	"fdtoverlay_addr_r=0x01f00000\0" \
-	"kernel_addr_r=0x02000000\0" \
-	"ramdisk_addr_r=0x04000000\0"
 
 /* Linux fails to load the fdt if it's loaded above 256M on a Rock 2 board, so
  * limit the fdt reallocation to that */

@@ -5,6 +5,12 @@
 #ifndef __CONFIG_RV1108_COMMON_H
 #define __CONFIG_RV1108_COMMON_H
 
+#define ENV_MEM_LAYOUT_SETTINGS \
+	"scriptaddr=0x60000000\0" \
+	"fdt_addr_r=0x61f00000\0" \
+	"kernel_addr_r=0x62000000\0" \
+	"ramdisk_addr_r=0x64000000\0"
+
 #include "rockchip-common.h"
 
 #define CFG_IRAM_BASE		0x10080000
@@ -15,12 +21,6 @@
 #define CFG_SYS_TIMER_COUNTER	(CFG_SYS_TIMER_BASE + 8)
 
 #define CFG_SYS_SDRAM_BASE		0x60000000
-
-#define ENV_MEM_LAYOUT_SETTINGS \
-	"scriptaddr=0x60000000\0" \
-	"fdt_addr_r=0x61f00000\0" \
-	"kernel_addr_r=0x62000000\0" \
-	"ramdisk_addr_r=0x64000000\0"
 
 #include <config_distro_bootcmd.h>
 #define CFG_EXTRA_ENV_SETTINGS \

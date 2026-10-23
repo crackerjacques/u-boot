@@ -6,19 +6,19 @@
 #ifndef __CONFIG_RK3188_COMMON_H
 #define __CONFIG_RK3188_COMMON_H
 
-#include "rockchip-common.h"
-
-#define CFG_IRAM_BASE	0x10080000
-
-#define CFG_SYS_SDRAM_BASE		0x60000000
-#define SDRAM_MAX_SIZE			0x80000000
-
 #define ENV_MEM_LAYOUT_SETTINGS \
 	"scriptaddr=0x60000000\0" \
 	"pxefile_addr_r=0x60100000\0" \
 	"fdt_addr_r=0x61f00000\0" \
 	"kernel_addr_r=0x62000000\0" \
 	"ramdisk_addr_r=0x64000000\0"
+
+#include "rockchip-common.h"
+
+#define CFG_IRAM_BASE	0x10080000
+
+#define CFG_SYS_SDRAM_BASE		0x60000000
+#define SDRAM_MAX_SIZE			0x80000000
 
 /* Linux fails to load the fdt if it's loaded above 256M on a Rock board,
  * so limit the fdt reallocation to that */
