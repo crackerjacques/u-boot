@@ -6,6 +6,7 @@
 #ifndef __CONFIG_RK3288_COMMON_H
 #define __CONFIG_RK3288_COMMON_H
 
+#ifndef CONFIG_ROCKCHIP_COMMON_STACK_ADDR
 #define ENV_MEM_LAYOUT_SETTINGS \
 	"scriptaddr=0x00000000\0" \
 	"pxefile_addr_r=0x00100000\0" \
@@ -13,6 +14,7 @@
 	"fdtoverlay_addr_r=0x01f00000\0" \
 	"kernel_addr_r=0x02000000\0" \
 	"ramdisk_addr_r=0x04000000\0"
+#endif
 
 #include "rockchip-common.h"
 
