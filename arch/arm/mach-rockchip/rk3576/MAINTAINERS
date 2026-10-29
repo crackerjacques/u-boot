@@ -1,3 +1,9 @@
+ANBERNIC-RG-VITA-PRO-RK3576
+M:	crackerjacques <there_is_q@outlook.jp>
+S:	Maintained
+N:	rk3576-anbernic-rg-vita-pro
+F:	configs/anbernic-rg-vita-pro-rk3576_defconfig
+
 GENERIC-RK3576
 M:	Jonas Karlman <jonas@kwiboo.se>
 S:	Maintained
